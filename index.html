@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js" defer></script>
+    <title>Covid Tracker</title>
+</head>
+<body>
+    <img src="./imgs/4.png" alt="covid19">
+    <div class="continents-container">
+        <button id="global" class="global btn">Global</button>
+        <button id= "asia" class = "asia btn">Asia</button>
+        <button id="africa" class="africa btn">Africa</button>
+        <button id="america" class="america btn">America</button>
+        <button id="europe" class="europe btn">Europe</button>
+    </div>
+   <div><select name="countries" id="countries">
+</select></div>
+    
+    
+    <main>
+        <div id="stats-container" class="stats-container">
+            <div class="stats-confirmed">Confirmed Cases
+                <div id="stats-confirmed"></div>
+            </div>
+            <div class="stats-deaths">Total Deaths
+                <div id="stats-deaths"></div>
+            </div>
+            <div class="stats-critical">Critical Cases
+                <div id="stats-critical"></div>
+            </div>
+            <div class="stats-recovered">Patients Recovered
+                <div id="stats-recovered"></div>
+            </div>
+        </div>
+    
+    
+        <div id="chart-container">
+            <canvas id="myChart" width="300" height="60"></canvas>
+        </div>
+    </main>
+      
+
+      <div class="data-btn">
+          <button id="confirmed" class="confirmed btn">Confirmed cases</button>
+          <button id="critical" class="critical btn">Critical</button>
+          <button id="deaths" class="deaths btn">Deaths</button>
+          <button id="recovered" class="recovered btn">Recovered</button>
+      </div>
+   
+
+      <div id="loading">
+          <span>Loading....</span>
+    </div>
+</body>
+</html>
